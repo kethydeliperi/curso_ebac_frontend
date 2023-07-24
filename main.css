@@ -2,23 +2,82 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .container {
-    margin: 80px auto;
-    max-width: 640px;
+    max-width: 1024px;
     width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #187958;
+    padding-top: 16px;
+    color: white;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.container-flex {
+    display: flex;
+}
+
+section {
+    padding: 25px 0;
+}
+
+section h2 {
+    margin-bottom: 16px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    background-color:rgba(14, 121, 62, 0.733);
+    color: white;
+    font-size: 16px;
+    font-weight:600;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.form-campo, .form-campo-end {
+    margin-bottom: 12px;
+}
+
+.form-campo label, .form-campo-end {
+    font-weight: bold;
+    display: block;
+}
+
+.form-campo input, .form-campo textarea {
+    width: 100%;
+    display: block;
+    padding: 8px;
+}
+
+.form-campo textarea {
+    resize: none;
+    height: 120px;
+}
+
+#cep {
+    width: 50%;
 }
 
 form {
-    margin-top: 40px;
+    max-width: 360px;
 }
 
-input, textarea, button {
-    display: block;
-    padding: 8px;
-    margin-bottom: 8px;
-    width: 100%;
-    resize: none;
+form button {
+    max-width: 180px;
 }
+

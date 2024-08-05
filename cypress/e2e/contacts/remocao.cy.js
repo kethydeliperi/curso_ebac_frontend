@@ -6,6 +6,7 @@ describe('Teste para remoção de um contato', () => {
     })
 
     it('', () => {
-        cy.get('.delete').click()
+        cy.get('.delete').first().click()
+        cy.get('h2').contains('3')
     })
 })

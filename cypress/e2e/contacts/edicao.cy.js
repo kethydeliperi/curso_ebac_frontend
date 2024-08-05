@@ -6,9 +6,12 @@ describe('Teste para alteração de um contato', () => {
     })
 
     it('Deve renderizar edição de um contato', () => {
-        cy.get('.sc-eDDNvR').click()
-        cy.get('.edit').click()
-        cy.get('[type="text"]').type(' Silva')
+        cy.get('.edit').first().click()
+        cy.get('[type="email"]').clear()
+        cy.get('[type="email"]').type('novoemail@teste.com')
+
         cy.get('.alterar').click()
+
+        cy.contains('gian@ebac.com.br').should('not.exist')
     })
 })

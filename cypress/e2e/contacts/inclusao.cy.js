@@ -6,9 +6,12 @@ describe('Teste para inclusão de contato', () => {
     })
 
     it('Deve renderizar adição de um novo contato', () => {
-        cy.get('[type="text"]').type('Ana')
-        cy.get('[type="email"]').type('ana@teste.com')
-        cy.get('[type="tel"]').type('11 123456789')
+        cy.get('[type="text"]').type('Kethyllen')
+        cy.get('[type="email"]').type('kethyllen@teste.com')
+        cy.get('[type="tel"]').type('11 12345678')
+
         cy.get('.adicionar').click() 
+
+        cy.get('h2').contains('4')
     })
 })
